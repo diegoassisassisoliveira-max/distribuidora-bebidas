@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <link rel="" href="index.html">
+<head>
+    <meta charset="UTF-8">
+    <title>produtos dispiniveis</title>
+    <body>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            background-image: url(/imagens/foto\ laranja\ de\ fundo.jfif);
+            background-size: 100%;
+            background-position-x: center;
+            margin-top: 0;
+        }
+
+
+        .container {
+            display: flex; /* Alinha os produtos lado a lado */
+            gap: 40px;     /* Espaço entre os cards */
+            flex-wrap: wrap; /* Quebra linha se não couber na tela */
+            padding: 20px;
+            font-size: 57px;
+        }
+
+        .product-card {
+            width: 220px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain; /* Ajustado para as garrafas e latas aparecerem inteiras */
+            border-radius: 4px;
+        }
+
+        .product-card h3 {
+            font-size: 20px;
+            margin: 12px 0 8px 0;
+            color: #333;
+        }
+
+        .product-card .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d35400; /* Laranja Escuro */
+            margin-bottom: 12px;
+        }
+
+        .product-card button {
+            background-color: #d35400;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .product-card button:hover {
+            background-color: #ba4a00;
+        }
+
+        h1 {
+            font-size: 70px;
+            color: rgb(221, 143, 26);
+            align-items: center;
+            padding: 40px;
+            border-color: black;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+
+        }
+
+       
+
+        .botaodecomprar:hover::before {
+            height: 100%;
+        }
+
+        .botaodecomprar:hover {
+            color: #ffffff;
+        }
+
+        h2 {
+            font-size: 50px;
+            color: rgb(221, 143, 26);
+            align-items: center;
+            padding: 40px;
+            border-color: black;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        p {
+            font-size: 30px;
+            margin-top: 60px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+       
+        
+        .btn-finalizar {
+            background-color: rgb(221, 143, 26);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 30px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            border: 2px solid;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            font-weight: bold;
+            z-index: 1;
+            transition: color 0.4s ease-in-out;
+            
+        }
+
+        .btn-finalizar::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background-color: darkorange;
+            z-index: -1;
+            transition:height 0.4 ease-in-out;
+
+        }
+
+         .btn-finalizar:hover::before {
+            height: 100%;
+        }
+
+        .btn-finalizar:hover {
+            color: #ffffff;
+        }
+
+
+
+        /* Estilo básico para a lista do carrinho não ficar desconfigurada */
+        #carrinho ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #carrinho li {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        #carrinho button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+    
+    <h1>PRODUTOS DISPONÍVEIS</h1>
+    
+    <!-- Container que segura todos os produtos -->
+   
+    <div class="container">
+
+        <!-- PRODUTO 1 -->
+        <div class="product-card">
+            <img src="data:image/webp;base64,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" alt="vinho pinto">
+            <h3 class="vinhoPinto">vinho Pinto</h3>
+            <div class="price">R$ 1.800,90</div>
+            <button class="btn-adicionar" data-nome="vinho pinto" data-preco="1800.90">Adicionar</button>
+        </div>
+
+        <!-- PRODUTO 2 -->
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_uweLovFFER0Gh9mL6S9gUUID62paJXVqUgnRv4WobA&s=10" alt="brahma">
+            <h3>brahma</h3>
+            <div class="price">R$ 8,50</div>
+            <button class="btn-adicionar" data-nome="brahma" data-preco="8.50">Adicionar</button>
+        </div>
+        
+        <!-- PRODUTO 3 -->
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwai1G5NC_uaj2OPDQnZ6sTIijK-RsYcQKeyHGugtPNw&s=10" alt="heineken">
+            <h3>heineken</h3>
+            <div class="price">R$ 7,00</div>
+            <button class="btn-adicionar" data-nome="heineken" data-preco="7.00">Adicionar</button>
+        </div>
+
+        <!-- PRODUTO 4 -->
+        <div class="product-card">
+            <img src="https://th.bing.com/th?id=OPHS.3SsKJ99%2b7xKURg474C474&w=184&h=220&c=17&pid=21.1" alt="whisky royal">
+            <h3>whisky royal</h3>
+            <div class="price">R$ 800,90</div>
+            <button class="btn-adicionar" data-nome="whisky royal" data-preco="800.90">Adicionar</button>
+        </div>
+
+        <!-- PRODUTO 5 -->
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRl_Wv83jVx69GdaYF8a06TdUhvgzi533ESpuJKSIJJQ&s=10" alt="corote">
+            <h3>corote</h3>
+            <div class="price">R$ 5,00</div>
+            <button class="btn-adicionar" data-nome="corote" data-preco="5.00">Adicionar</button>
+        </div>
+
+        <!-- PRODUTO 6 -->
+        <div class="product-card">
+            <img src="https://destro.fbitsstatic.net/img/p/bebida-alcoolica-roskoff-ice-sabor-limao-275ml-88775/275773.jpg?w=500&h=500&v=202501231555&qs=ignore" alt="toddy">
+            <h3>Bebida Alcoólica Roskoff Ice Sabor Limão 275ml</h3>
+            <div class="price">R$ 16,50</div>
+            <button class="btn-adicionar" data-nome="ice sabor limão" data-preco="16.50">Adicionar</button>
+        </div>
+
+        <!--produto 7-->
+        <div class="product-card">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71a8-9BtUVL._AC_UL375_SR375,375_.jpg" alt="Campari">
+            <h3>Campari Bitter 900ml</h3>
+            <div class="price">67,99</div>
+            <button class="btn-adicionar" data-nome="Campari Bitter 900ml" data-preco="67.99">Adicionar</button>
+           
+        </div>
+
+    </div>
+    
+
+    <!-- Botão de finalizar compra -->
+    <button class="btn-finalizar" id="btn-finalizar">finalizar compra</button>
+
+<script>
+    const produtosSelecionados = [];
+
+    // Adiciona evento de clique a todos os botões "Adicionar"
+    document.querySelectorAll('.btn-adicionar').forEach(button => {
+        button.addEventListener('click', () => {
+            const nome = button.getAttribute('data-nome');
+            const preco = parseFloat(button.getAttribute('data-preco'));
+            produtosSelecionados.push({ nome, preco });
+            atualizarCarrinhoTela();
+        });
+    });
+
+    // Função para atualizar o carrinho na tela
+    function atualizarCarrinhoTela() {
+        let carrinhoHTML = '<h2>Carrinho de Compras</h2>';
+        let total = 0;
+
+        if (produtosSelecionados.length === 0) {
+            carrinhoHTML += '<p>Seu carrinho está vazio.</p>';
+        } else {
+            carrinhoHTML += '<ul>';
+            produtosSelecionados.forEach((produto, index) => {
+                total += produto.preco;
+                carrinhoHTML += `<li>${produto.nome} - R$ ${produto.preco.toFixed(2)} <button onclick="removerItem(${index})">Remover</button></li>`;
+            });
+            carrinhoHTML += '</ul>';
+            carrinhoHTML += `<p>Total: R$ ${total.toFixed(2)}</p>`;
+        }
+
+        // Exibe o carrinho na tela
+        let carrinhoDiv = document.getElementById('carrinho');
+        if (!carrinhoDiv) {
+            carrinhoDiv = document.createElement('div');
+            carrinhoDiv.id = 'carrinho';
+            document.body.appendChild(carrinhoDiv);
+        }
+        carrinhoDiv.innerHTML = carrinhoHTML;
+    }
+
+    // Função para remover item do carrinho
+    function removerItem(index) {
+        produtosSelecionados.splice(index, 1);
+        atualizarCarrinhoTela();
+    }
+
+    // Função para enviar o pedido via WhatsApp
+    function enviarPedido() {
+        if (produtosSelecionados.length === 0) {
+            alert("SEU CARRINHO ESTA VAZIO, ADCIONE PELO MENOS 1 ITEM PARA FINALIZAR.");
+            return;
+        }
+
+        let textoMensagem = "Olá! Quero finalizar a compra dessas bebidas:\n\n";
+        let total = 0;
+
+        produtosSelecionados.forEach((produto) => {
+            textoMensagem += `- *${produto.nome}*: R$ ${produto.preco.toFixed(2)}\n`;
+            total += produto.preco;
+        });
+
+        textoMensagem += `\n*Total: R$ ${total.toFixed(2)}*`;
+
+        const numeroWhats = "5531991558651"; 
+        const mensagemFormatada = encodeURIComponent(textoMensagem);
+        
+        
+        const linkFinal = `https://wa.me/${numeroWhats}?text=${mensagemFormatada}`;
+
+        window.open(linkFinal, "_blank");
+    }
+
+    // Vincula a função enviarPedido ao clique do botão da tela
+    document.getElementById('btn-finalizar').addEventListener('click', enviarPedido);
+</script>
+</body>
+
+</html>
