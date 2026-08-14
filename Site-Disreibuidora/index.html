@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link>
+    
+    <title>Distribuidora de bebidas</title>
+</head>
+
+<body>
+     <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background-color: rgb(0, 0, 0);
+   color : white;
+   font-family: 'Poppins', sans-serif;
+    background-image: url(/imagens/foto\ laranja\ de\ fundo.jfif);
+    text-align: center;
+    margin-top: 0;
+    overflow-x: hidden;
+   max-width: 100%;
+
+}
+
+button{
+    font-family: "Poppins";
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    font-size: 16px;
+    justify-content: center;
+    opacity: 0.8;
+    
+    
+}
+
+button:hover{
+    opacity: 1;
+    transition: all 1s;
+}
+
+
+
+header{
+    width: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    padding: 20px 4%;
+    align-items: center;
+    position: fixed;
+    border: none;
+    outline: none;
+    justify-content: space-between;
+    z-index: 99; 
+    
+
+}
+
+
+.logotipo {
+    width: 60px;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    list-style-type: none;
+    background-color: rgba(165, 162, 161, 0.267);
+    padding: 16px 20px;
+    border-radius: 13px;
+    backdrop-filter: blur(20px);
+}
+
+section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+   
+}
+
+.seção1{
+    
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+    height: 90vh;
+    
+    
+
+}
+
+h1 {
+    font-size: 15vw;
+    color: rgb(221, 143, 26);
+    mix-blend-mode: color-dodge;
+    align-items: center;
+}
+.conteudoPrincipal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8)
+    
+   
+}
+
+.divBotoes{
+    display : flex;
+    gap: 10px;
+    margin-top: 20px;
+
+}
+
+
+.botaoPrimario{
+    background-color: rgb(228, 228, 228);
+    padding: 6px 6px 6px 30px;
+    gap: 20px;
+    width: 20px;
+    color: rgba(185, 183, 179, 0.233);
+    background-color: rgb(228, 228, 228);
+    padding: 10px;
+    gap: 60px;
+    width: max-content;
+    align-items: center;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(248, 248, 247);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 12px 20px;
+     font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    background-color: rgb(243, 242, 242);
+    border: 2px solid;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    z-index: 1;
+    transition: color 0.4s ease-in-out;
+
+}
+
+.botaoPrimario::before {
+    content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background-color: darkorange;
+            z-index: -1;
+            transition:height 0.4 ease-in-out;
+}
+
+.botaoPrimario:hover::before {
+     height: 100%;
+}
+
+.botaoPrimario:hover {
+    color: #ffffff;
+}
+    
+    
+.botaoSecundario {
+     background-color: rgb(228, 228, 228);
+    padding: 6px 6px 6px 30px;
+    gap: 20px;
+    width: 20px;
+    color: rgba(185, 183, 179, 0.233);
+    background-color: rgb(228, 228, 228);
+    padding: 10px;
+    gap: 60px;
+    width: max-content;
+    align-items: center;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(248, 248, 247);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    background-color: rgb(243, 242, 242);
+    border: 2px solid;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    z-index: 1;
+    transition: color 0.4s ease-in-out;
+
+}
+
+.botaoSecundario::before {
+     content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background-color: darkorange;
+            z-index: -1;
+            transition:height 0.4 ease-in-out;
+}
+
+.botaoSecundario:hover::before {
+    height: 100%;
+}
+
+.botaoSecundario:hover {
+    color: #ffffff;
+}
+
+
+.imagem-logotipo{
+    background-color: rgba(245, 243, 242, 0.295);
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 20px;
+    align-items: center;
+}
+
+.tituloSecao{
+    font-size: 250%;
+    font-weight: 500;
+}
+
+.seção2 {
+    align-items: center;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.8);
+    background-size: 40%;
+    justify-items: center;
+    
+
+    
+}
+
+.divCards {
+     display: flex;
+     flex-wrap: nowrap;
+}
+
+.branco {
+    background-color: rgba(150, 145, 145, 0.678);
+}
+
+.titoloSecao {
+    padding: 60px;
+    font-size: 60px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-items: center;
+    
+}
+
+.servicos {
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+}
+
+.variedades {
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+}
+
+.atendimento {
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+}
+
+.divImagens {
+    padding: 70px;
+    align-items: baseline;
+
+}
+
+
+.botaodeProdutos {
+    background-color: rgb(228, 228, 228);
+    padding: 10px;
+    gap: 60px;
+    width: max-content;
+    align-items: center;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(248, 248, 247);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 12px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    background-color: rgb(243, 242, 242);
+    border: 2px solid;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    z-index: 1;
+    transition: color 0.4s ease-in-out;
+   
+}
+
+
+.botaodeProdutos::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: darkorange;
+    z-index: -1;
+    transition:height 0.4 ease-in-out;
+
+}
+
+.botaodeProdutos:hover::before {
+    height: 100%;
+}
+
+.botaodeProdutos:hover {
+    color: #ffffff;
+}
+
+.produtus {
+    padding: 67px; 
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+
+
+}
+
+.maismasi {
+    padding: 18px;
+    justify-items: center;
+     align-items: center;
+      font-size: 52px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    display: center;
+    
+}
+
+
+.localizaçao {
+    font-weight: 100px;
+        padding: 20px;
+        align-items: center;
+        justify-items: center;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    
+
+}
+
+.fa {
+    align-items: center;
+    font-size: 52px;
+    justify-items: center;
+    padding: 200;
+}
+
+.tituloPrincipal {
+    font-size: 14vw;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 60px;
+
+}
+
+.paragrafo1 {
+     display: center;
+     padding: 20px;
+    
+    }
+
+
+
+     </style>
+
+   <header>
+        <img src="https://th.bing.com/th/id/OIP.fQ_10FU_UMzwNyLtda8uCgHaHa?w=108&h=108&c=1&bgcl=e2876d&r=0&o=7&pid=ImgRC&rm=3g"
+            alt="Logo da Empresa" class="logotipo">
+        <nav>
+            <ul>
+                <li>serviços</li>
+                <li>produtos</li>
+                <li>localização</li>
+            </ul>
+        </nav>
+    </header>
+     <!-- seção 1 -->
+    <section class="seção1">
+        <h1 class="tituloPrincipal">Distribuidora</h1>
+             <div class="conteudoPrincipal">
+            <h2 class="tituloSecao">Distribuidora de bebidas</h2>
+            <p>Uma empresa dedicada a distribuir uma ampla gama de bebidas de qualidade e variedade, atendendo às
+                necessidades de seus clientes com excelência e confiabilidade, temos todas as variedade de bebida disponivel no mercado, não perca tempo e vem garantir sua bebida refrescante e saborosa.</p> 
+                <div class="divBotoes">
+                    <a href="SaibaMais.html">
+                <button class="botaoPrimario">SOBRE NÓS</button>
+                    </a>
+
+                    <a href="https://wa.me" class="botao-whatsapp" target="_blank">
+                <button class="botaoSecundario">ENTRAR EM CONTATO CONOSCO</button>
+                    </a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- seção 2 -->
+
+    <section class="seção2">
+
+        
+        
+        <h2 class="titoloSecao">Serviços</h2>
+        <div class="divCards">
+           
+        </div>
+        <div class="servicos">
+            <h3>Entrega super rapida!</h3>
+
+            <p>Garantimos entregas rápidas e eficientes para que nossos clientes recebam seus produtos no menor tempo
+                possível.</p>
+        </div>
+        <div class="variedades">
+
+            <h3>Variedade de Produtos</h3>
+            <p>Oferecemos uma ampla variedade de bebidas, desde refrigerantes até bebidas alcoólicas, atendendo a todos
+                os gostos.</p>
+                
+        </div>
+        <div class="atendimento">
+            <h3>Atendimento Personalizado</h3>
+            <p>Nossa equipe está sempre pronta para oferecer um atendimento personalizado, garantindo a satisfação de
+                cada cliente.</p>
+
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+
+        <div class="produtus">
+        <h2 class="maismasi">PRODUTOS</h2>
+        <p class="paragrafo1">Temos diversas bebidas e varios sabores para você escolher, damos o nosso maximo para você ter a melhoe experiencia com as nossas bebidas, clique abaixo para ver os nossos produtos.👇</p>
+         <a href="produtos.html">
+        <button class="botaodeProdutos">NOSSOS PRODUTOS</button>
+        </a>
+
+
+    <div id="lista-produtos">
+        <main id="vitrine" class="container-preodutos"></main>
+
+        
+        </div>
+        
+        </div>
+        
+
+
+        <div class="localizaçao">
+        <h2 class="fa">Localização</h2>
+        
+        <p>nos localizamos no bairro itacolomi, e temos esse botão abaixo caso vc queira vir pessoalmente a loja.
+            não é obrigatorio vir mas se você quiser vir conhecer a loja estamos te esperando de braços abertor para nos avaliar e experimentar nossas bebidas.</p>
+
+        </div>
+        
+
+        
+         
+       
+
+    </div>
+        </div>
+        </div>
+
+        <p class="final">@distribuidora mendes</p>
+        <p class="ultimo">não dirigir após o consumo de bebidas alcolicas.</p>
+
+    </section>
+
+</body>
+
+        </html>
